@@ -1,6 +1,6 @@
 # Saga Engine Agent
 
-Saga (Structured Adventure Game Agent) Engine Agent is an interactive storytelling LLM agent that communicates with a game state server via tool-calling. It is part of the Saga Engine open core, along with the [Saga Engine Server](https://github.com/peterkuimelis/saga-server) (submoduled).
+Saga (Structured Adventure Game Agent) Engine Agent is an interactive storytelling LLM agent that communicates with a game state server via tool-calling. It is part of the Saga Engine open core, along with the [Saga Engine Server](https://github.com/peterkuimelis/saga-server).
 
 ## Background
 
@@ -9,7 +9,7 @@ The idea is to combine the narrative generation capabilities of LLMs with the st
 An LLM agent is given a curated set of tools for interacting with a purpose-built text adventure game server. In a REPL-like loop, the agent describes the current state of the game, waits for player input, maps that input to a tool call and reports the response, while remaining in-character.
 
 ## Demo
-Below is an example gameplay transcript, using a thin MCP (Model Context Protocl) server wrapper around the game server API and an off-the-shelf MCP client, [MCPHost](https://github.com/mark3labs/mcphost). The model is GPT-4o (likely overkill). The game definition JSON can be found [here](server/internal/testdata/demo.json).
+Below is an example gameplay transcript, using a thin MCP (Model Context Protocl) server wrapper around the game server API and an off-the-shelf MCP client, [MCPHost](https://github.com/mark3labs/mcphost). The model is GPT-4o (likely overkill). The game definition JSON can be found [here](https://github.com/peterkuimelis/saga-server/blob/fb7c63f04ab7369e3099780e43f25264fbd14e69/internal/testdata/demo.json).
 
 
 🧑 <span style="color: #1E90FF;"><strong>user:</strong> where am i</span>
