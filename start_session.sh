@@ -9,6 +9,7 @@ set -e  # Exit on any error
 GO_SERVER_URL="http://localhost:8080"
 API_KEY="${OPENAI_API_KEY}"
 MODEL="openai:gpt-4o"
+DEMO_JSON_PATH="server/internal/testdata/demo.json"
 
 # Check if API key is set
 if [ -z "$API_KEY" ]; then
@@ -25,11 +26,18 @@ if ! curl -s "$GO_SERVER_URL/api/v1/sessions" > /dev/null 2>&1; then
     exit 1
 fi
 
-# Create a new session
-echo "🎮 Creating new game session..."
+# Check if demo.json exists
+if [ ! -f "$DEMO_JSON_PATH" ]; then
+    echo "Error: Demo JSON file not found at $DEMO_JSON_PATH"
+    echo "Make sure the server submodule is properly initialized"
+    exit 1
+fi
+
+# Create a new session with demo.json
+echo "🎮 Creating new game session with demo level..."
 SESSION_RESPONSE=$(curl -s -X POST "$GO_SERVER_URL/api/v1/sessions" \
     -H "Content-Type: application/json" \
-    -d '{"level": {"name": "demo", "description": "A mysterious abandoned building"}}')
+    -d "{\"level\": $(cat "$DEMO_JSON_PATH")}")
 
 # Extract session ID from response
 SESSION_ID=$(echo "$SESSION_RESPONSE" | grep -o '"session_id":"[^"]*"' | cut -d'"' -f4)

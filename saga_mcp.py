@@ -237,7 +237,7 @@ def traverse(door_or_direction: str) -> Dict[str, Any]:
     }
     ```
     """
-    return _call_game_api("/traverse", {"destination_name": door_or_direction})
+    return _call_game_api("/traverse", {"door_or_direction": door_or_direction})
 
 
 # ────────────────────────────────────────────────────────────────────────────────
