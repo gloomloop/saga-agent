@@ -22,8 +22,6 @@ Nearby, an unopened energy drink sits, a small beacon of life in this forsaken p
 
 To the west stands a metal stairwell door, locked and foreboding, its purpose concealed by a key lock. To the north, an office door invites investigation, while to the east, a storage room door waits to be explored. Each path promises its own secrets and dangers.</span>
 
----
-
 🧑 <span style="color: #1E90FF;"><strong>user:</strong> inspect the drink</span>
 
 🛠️ <span style="color: #DAA520;"><strong>tool call:</strong> saga-engine-server__inspect {"target_name":"energy drink"}</span>
