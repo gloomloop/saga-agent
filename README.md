@@ -1,6 +1,6 @@
-# Saga Engine Agent
+# SAGA Engine Agent
 
-Saga (Structured Adventure Game Agent) Engine Agent is an interactive storytelling LLM agent that communicates with a game state server via tool-calling. It is part of the Saga Engine open core, along with the [Saga Engine Server](https://github.com/peterkuimelis/saga-server).
+SAGA (Structured Adventure Game Agent) Engine Agent is an interactive storytelling LLM agent that communicates with a game state server via tool-calling. It is part of the SAGA Engine, along with the [SAGA Engine Server](https://github.com/gloomloop/saga-server).
 
 ## Background
 

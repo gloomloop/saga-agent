@@ -1,5 +1,5 @@
 """
-A FastMCP server for the Saga Engine Server.
+A FastMCP server for the SAGA Engine Server.
 
 This server provides a tool-based interface for an LLM agent to interact
 with the Go-based game engine.
@@ -16,7 +16,7 @@ from typing import Dict, Any, Optional
 import requests
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("Saga Engine ServerMCP")
+mcp = FastMCP("SAGA Engine ServerMCP")
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Configuration
@@ -25,7 +25,7 @@ GO_SERVER_URL = "http://localhost:8080"
 
 # Get session ID from command line argument
 if len(sys.argv) != 2:
-    print("Usage: python saga_mcp.py <session_id>")
+    print("Usage: python SAGA_mcp.py <session_id>")
     sys.exit(1)
 
 SESSION_ID = sys.argv[1]
@@ -263,6 +263,6 @@ def battle(weapon_name: str) -> Dict[str, Any]:
 
 # ────────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    print(f"🚀 Starting Saga Engine Server MCP Server for session {SESSION_ID}...")
+    print(f"🚀 Starting SAGA Engine Server MCP Server for session {SESSION_ID}...")
     print("Agent can now use: observe, inspect, uncover, unlock, search, take, inventory, heal, traverse, battle")
     mcp.run()  # Runs with stdio transport by default

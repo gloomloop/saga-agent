@@ -2,7 +2,7 @@
     "mcpServers": {
         "saga-engine-server": {
             "type": "local",
-            "name": "Saga Engine Server MCP",
+            "name": "SAGA Engine Server MCP",
             "command": "python",
             "args": ["saga_mcp.py", "{{SESSION_ID}}"]
         }
