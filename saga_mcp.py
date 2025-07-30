@@ -25,7 +25,7 @@ GO_SERVER_URL = "http://localhost:8080"
 
 # Get session ID from command line argument
 if len(sys.argv) != 2:
-    print("Usage: python SAGA_mcp.py <session_id>")
+    print("Usage: python saga_mcp.py <session_id>")
     sys.exit(1)
 
 SESSION_ID = sys.argv[1]
@@ -226,7 +226,7 @@ def heal(health_item_name: str) -> Dict[str, Any]:
 @mcp.tool()
 def traverse(door_or_direction: str) -> Dict[str, Any]:
     """
-    Move to a different room. Supports both door names and cardinal directions.
+    Move to a different room. Supports both door names and relative directions.
 
     Example
     -------
@@ -244,10 +244,10 @@ def traverse(door_or_direction: str) -> Dict[str, Any]:
 # ⚔️ Battle Tool
 # ────────────────────────────────────────────────────────────────────────────────
 @mcp.tool()
-def battle(weapon_name: str) -> Dict[str, Any]:
+def battle(weapon_name: str = "fists") -> Dict[str, Any]:
     """
     Attack an enemy using a weapon from your inventory.
-    Leave weapon name blank to use your fists.
+    Defaults to hand-to-hand combat if no weapon is provided.
 
     Example
     -------
